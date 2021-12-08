@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6FB69E7-26D5-42D4-B35F-490D27632074}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Weatherly</RootNamespace>
+    <AssemblyName>Weatherly</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Nancy, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.2.0.0\lib\net452\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fonts\Dosis.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="images\weather_icons\night\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\weather_icons\day\113.png" />
+    <Resource Include="images\weather_icons\day\116.png" />
+    <Resource Include="images\weather_icons\day\119.png" />
+    <Resource Include="images\weather_icons\day\122.png" />
+    <Resource Include="images\weather_icons\day\143.png" />
+    <Resource Include="images\weather_icons\day\176.png" />
+    <Resource Include="images\weather_icons\day\179.png" />
+    <Resource Include="images\weather_icons\day\182.png" />
+    <Resource Include="images\weather_icons\day\185.png" />
+    <Resource Include="images\weather_icons\day\200.png" />
+    <Resource Include="images\weather_icons\day\227.png" />
+    <Resource Include="images\weather_icons\day\230.png" />
+    <Resource Include="images\weather_icons\day\248.png" />
+    <Resource Include="images\weather_icons\day\260.png" />
+    <Resource Include="images\weather_icons\day\263.png" />
+    <Resource Include="images\weather_icons\day\266.png" />
+    <Resource Include="images\weather_icons\day\281.png" />
+    <Resource Include="images\weather_icons\day\284.png" />
+    <Resource Include="images\weather_icons\day\293.png" />
+    <Resource Include="images\weather_icons\day\296.png" />
+    <Resource Include="images\weather_icons\day\299.png" />
+    <Resource Include="images\weather_icons\day\302.png" />
+    <Resource Include="images\weather_icons\day\305.png" />
+    <Resource Include="images\weather_icons\day\308.png" />
+    <Resource Include="images\weather_icons\day\311.png" />
+    <Resource Include="images\weather_icons\day\314.png" />
+    <Resource Include="images\weather_icons\day\317.png" />
+    <Resource Include="images\weather_icons\day\320.png" />
+    <Resource Include="images\weather_icons\day\323.png" />
+    <Resource Include="images\weather_icons\day\326.png" />
+    <Resource Include="images\weather_icons\day\329.png" />
+    <Resource Include="images\weather_icons\day\332.png" />
+    <Resource Include="images\weather_icons\day\335.png" />
+    <Resource Include="images\weather_icons\day\338.png" />
+    <Resource Include="images\weather_icons\day\350.png" />
+    <Resource Include="images\weather_icons\day\353.png" />
+    <Resource Include="images\weather_icons\day\356.png" />
+    <Resource Include="images\weather_icons\day\359.png" />
+    <Resource Include="images\weather_icons\day\362.png" />
+    <Resource Include="images\weather_icons\day\365.png" />
+    <Resource Include="images\weather_icons\day\368.png" />
+    <Resource Include="images\weather_icons\day\371.png" />
+    <Resource Include="images\weather_icons\day\374.png" />
+    <Resource Include="images\weather_icons\day\377.png" />
+    <Resource Include="images\weather_icons\day\386.png" />
+    <Resource Include="images\weather_icons\day\389.png" />
+    <Resource Include="images\weather_icons\day\392.png" />
+    <Resource Include="images\weather_icons\day\395.png" />
+    <Resource Include="images\weather_icons\night\113.png" />
+    <Resource Include="images\weather_icons\night\116.png" />
+    <Resource Include="images\weather_icons\night\119.png" />
+    <Resource Include="images\weather_icons\night\122.png" />
+    <Resource Include="images\weather_icons\night\143.png" />
+    <Resource Include="images\weather_icons\night\176.png" />
+    <Resource Include="images\weather_icons\night\179.png" />
+    <Resource Include="images\weather_icons\night\182.png" />
+    <Resource Include="images\weather_icons\night\185.png" />
+    <Resource Include="images\weather_icons\night\200.png" />
+    <Resource Include="images\weather_icons\night\227.png" />
+    <Resource Include="images\weather_icons\night\230.png" />
+    <Resource Include="images\weather_icons\night\248.png" />
+    <Resource Include="images\weather_icons\night\260.png" />
+    <Resource Include="images\weather_icons\night\263.png" />
+    <Resource Include="images\weather_icons\night\266.png" />
+    <Resource Include="images\weather_icons\night\281.png" />
+    <Resource Include="images\weather_icons\night\284.png" />
+    <Resource Include="images\weather_icons\night\293.png" />
+    <Resource Include="images\weather_icons\night\296.png" />
+    <Resource Include="images\weather_icons\night\299.png" />
+    <Resource Include="images\weather_icons\night\302.png" />
+    <Resource Include="images\weather_icons\night\305.png" />
+    <Resource Include="images\weather_icons\night\308.png" />
+    <Resource Include="images\weather_icons\night\311.png" />
+    <Resource Include="images\weather_icons\night\314.png" />
+    <Resource Include="images\weather_icons\night\317.png" />
+    <Resource Include="images\weather_icons\night\320.png" />
+    <Resource Include="images\weather_icons\night\323.png" />
+    <Resource Include="images\weather_icons\night\326.png" />
+    <Resource Include="images\weather_icons\night\329.png" />
+    <Resource Include="images\weather_icons\night\332.png" />
+    <Resource Include="images\weather_icons\night\335.png" />
+    <Resource Include="images\weather_icons\night\338.png" />
+    <Resource Include="images\weather_icons\night\350.png" />
+    <Resource Include="images\weather_icons\night\353.png" />
+    <Resource Include="images\weather_icons\night\356.png" />
+    <Resource Include="images\weather_icons\night\359.png" />
+    <Resource Include="images\weather_icons\night\362.png" />
+    <Resource Include="images\weather_icons\night\365.png" />
+    <Resource Include="images\weather_icons\night\368.png" />
+    <Resource Include="images\weather_icons\night\371.png" />
+    <Resource Include="images\weather_icons\night\374.png" />
+    <Resource Include="images\weather_icons\night\377.png" />
+    <Resource Include="images\weather_icons\night\386.png" />
+    <Resource Include="images\weather_icons\night\389.png" />
+    <Resource Include="images\weather_icons\night\392.png" />
+    <Resource Include="images\weather_icons\night\395.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\background.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\wind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\humidity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\thermometer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\pressure-gauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\pin.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
